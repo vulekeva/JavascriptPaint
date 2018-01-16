@@ -1,8 +1,8 @@
 
 
 var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
-
+var context = canvas.getContext("2d");
+var slika = new Image();
 
 var clickX = new Array();
 var clickY = new Array();
@@ -14,16 +14,17 @@ var colorGreen = "#659b41";
 var colorYellow = "#ffcf33";
 var colorBlue = "#032dc9";
 var colorBlack = "#030000";
+var colorWhite="#FFFFFF";
 
 var curColor = colorRed;
 var clickColor = new Array();
 
 var painting = document.getElementById('javascriptPaint');
 var paint_style = getComputedStyle(painting);
-canvas.width = parseInt(paint_style.getPropertyValue('width'));
-canvas.height = parseInt(paint_style.getPropertyValue('height'));
+canvas.width = 800;//parseInt(paint_style.getPropertyValue('width'));
+canvas.height = 600;//parseInt(paint_style.getPropertyValue('height'));
 
-function promeniBoju(clicked_id) {
+function dugmeClick(clicked_id) {
 
     switch (clicked_id) {
         case "Crvena":
@@ -41,20 +42,34 @@ function promeniBoju(clicked_id) {
         case "Crna":
             curColor = colorBlack;
             break;
-        default: {
+        case "Gumica":
+            curColor = colorWhite;
+            break;
+        case "Obrisi":
             context.clearRect(0, 0, context.canvas.width, context.canvas.height);
             clickX=[];
             clickY=[];
             clickDrag=[];
             clickColor=[];
             break;
+        case "Lav":
+            slika.src="img/lav.png";
+            context.drawImage(slika,0,0,800,600);
 
-        }
+            break;
+        case "Ptica":
+            slika.src="img/ptica.png";
+            context.drawImage(slika,0,0,800,600);
+            break;
+        case "Prase":
+            slika.src="img/prase.png";
+            context.drawImage(slika,0,0,800,600);
+            break;
     }
 }
 
 function redraw(){
-    context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
+   // context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
 
     context.lineJoin = "round";
     context.lineWidth = 5;
