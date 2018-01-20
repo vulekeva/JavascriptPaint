@@ -4,6 +4,6 @@ body {
     margin: 0px;
     padding: 0px;
 }
-img{
-    visibility: hidden;
+#dodavanje_teksta, #crtaj_krug, #crtaj_kvadrat{
+    border:solid 1px;
 }

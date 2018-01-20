@@ -23,9 +23,27 @@
 <button id="Prase" onclick="dugmeClick(this.id)">Ubaci prase</button>
 <button id="Ptica" onclick="dugmeClick(this.id)">Ubaci pticu</button>
 <br>
-<img id="lavSlika" width="240" src="img/lav.png" alt="Lav">
-<img id="praseSlika" width="240" src="img/prase.png" alt="Prase">
-<img id="pticaSlika" width="240" src="img/ptica.png" alt="Ptica">
+<div id="dodavanje_teksta">
+Dodaj tekst:
+<input type="text" id="text_value"/>
+<br>
+Veličina teksta:
+<input type="text" id="text_size"/>
+    <button id="tekst" onclick="dugmeClick(this.id)">Dodaj tekst</button>
+</div>
+<div id="crtaj_krug">
+    Poluprecnik:<input type="text" id="poluprecnik kruga"/>
+    <button id="krug" onclick="dugmeClick(this.id)">Dodaj krug</button>
+</div>
+<div id="crtaj_kvadrat">
+    Dužina stranice:<input type="text" id="stranica_kvadrata"/>
+    <button id="kvadrat" onclick="dugmeClick(this.id)">Dodaj kvadrat</button>
+</div>
+<div id="crtaj_pravougaonik">
+    <button id="pravougaonik" onclick="dugmeClick(this.id)">Dodaj pravougaonik</button>
+</div>
+
+
 <script src="js/script.js"></script>
 </body>
 </html>
