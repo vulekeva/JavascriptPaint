@@ -187,6 +187,10 @@ function redraw(){
 
 }
 
+// document.getElementById('text_value').onkeyup = function() {
+//
+// }
+
 
 function addClick(x, y, dragging)
 {
